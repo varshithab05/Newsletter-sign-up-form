@@ -1,0 +1,233 @@
+@font-face {
+    font-family: parafont;
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: headingfont;
+    src: url(/assets/fonts/Roboto-Bold.ttf);
+}
+*{
+    font-size: 14px;
+    font-family: parafont;
+}
+body{
+    height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+}
+.mainbox{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 800px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    /* display: none; */
+}
+.points{
+    padding: 10px 0px 10px 0px;
+}
+.note{
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    height: 410px;
+    padding: 20px 0px 50px 45px;
+}
+.btnclick,.iemail{
+    display: inline-block;
+    width: 340px;
+    height: 40px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.btnclick{
+    display: inline-block;
+    padding: 0px;
+    height: 45px;
+    color: #FFFFFF;
+    background-color: hsl(234, 29%, 20%);
+}
+.btnclick:hover{
+    border-color: hsl(4, 100%, 67%);
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: 0px 10px 50px 5px hsl(4, 100%, 67%);
+}
+.iemail{
+    border:1px solid hsl(234, 29%, 20%);
+    height: 65%;
+    width: 90%;
+    padding: 0px 0px 0px 7px;
+}
+.img-lap{
+    padding: 20px 0px 20px 20px;
+    border-radius: 0px;
+}
+.img-mob{
+    display: none;
+}
+.note h1{
+    font-size: 40px;
+    font-family: headingfont;
+    color: hsl(234, 29%, 20%);
+}
+.point{
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+}
+.poinicon{
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-size: cover;
+}
+.email{
+    font-weight: 700;
+    margin-bottom: 55px;
+}
+.error{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.errormsg{
+    color: red;
+    display: none;
+}
+
+
+/* success page*/
+.finalmsg{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    width: 250px;
+    height: 330px;
+    padding: 50px 50px 50px 50px;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    display: none;
+}
+.msg{
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 15%;
+    height: 350px;
+
+}
+.doneicon{
+    height: 48px;
+    width: 48px;
+    margin-bottom: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.donemsg{
+    font-size: 40px;
+    font-family: headingfont;
+    margin-bottom: 0px;
+    color: hsl(234, 29%, 20%);
+}
+.donesub{
+    display: flex;
+}
+.donesub a{
+    text-decoration: none;
+    font-weight: 700;
+}
+.Dismiss{
+    width:100%;
+    height:40px;
+    cursor: pointer;
+    border-radius: 7px;
+    color: #FFFFFF;
+    border-color: hsl(234, 29%, 20%);
+    background-color: hsl(234, 29%, 20%);
+    margin-top: 15px;
+}
+.Dismiss:hover{
+    border-color: hsl(4, 100%, 67%);
+    background-color: hsl(4, 100%, 67%);
+    box-shadow: 0px 10px 50px 5px hsl(4, 100%, 67%);
+}
+
+/* responsive : mobile */
+@media only screen and (min-width: 280px) and (max-width:376px){
+    body{
+        background-color: white;
+        height: 700px;
+        overflow: hidden;
+    }
+    .mainbox{
+        width: 100%;
+        height: 700px;
+        background-color: white;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 20px;
+        z-index: 1;
+    }
+    .img-lap{
+        display: none;
+    }
+    .img{
+        margin: 0;
+        height: 400px;
+    }
+    .note{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .img-mob{
+        display: inline;
+        max-width: 100%;
+        height: 400px;
+        padding-bottom: 15px;
+    }
+    .img-mob img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        position: relative;
+    }
+    .note{
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .btnclick,.iemail{
+        display: inline-block;
+        width: 80%;
+
+    }
+    .iemail{
+        width: 78%;
+    }
+    .finalmsg{
+        display: flex;     
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        padding: 5px;
+        display: none;
+    }
+}
