@@ -34,16 +34,14 @@
           And much more!
         </div>
       </div>
-      <div class="email">
-        <div class="error">
-          <p>Email address</p>
-          <p class="errormsg">Valid email required</p>
-        </div>
-        <input class="iemail" type="email" placeholder="email@company.com">
-      </div>
-      <div class="btn">
+      <form class="forms">
+          <div class="error">
+            <p>Email address</p>
+            <p id="errormsg"></p>
+          </div>
+          <input id="iemail" type="email" placeholder="email@company.com">
         <button class="btnclick">Subscribe to monthly newsletter</button>
-      </div>
+        </form>
     </div>
     <div class="img">
       <div class="img-lap">
@@ -55,17 +53,17 @@
     </div>
   </div>
 
-  <div class="finalmsg">
+  <div class="hide finalmsg">
         <div class="doneicon" style="background-image: url(/assets/images/icon-success.svg);"></div>
         <h1 class="donemsg">Thanks for<br>subscribing!</h1>
         <div class="donesub">
             <p>
-                A confirmation email has been sent to <a>ash@loremcompany.com</a>. 
+                A confirmation email has been sent to <span id="inputmail"></span>. 
                  Please open it and click the button inside to confirm your subscription.
             </p>
         </div>
         <button class="Dismiss">Dismiss message</button>
   </div>
-  
+  <script src="index.js"></script>
 </body>
 </html>
