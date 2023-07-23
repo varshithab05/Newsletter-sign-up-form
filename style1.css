@@ -1,10 +1,10 @@
 @font-face {
     font-family: parafont;
-    src: url(Roboto-Regular.ttf);
+    src: url(/assets/fonts/Roboto-Regular.ttf);
 }
 @font-face {
     font-family: headingfont;
-    src: url(Roboto-Bold.ttf);
+    src: url(/assets/fonts/Roboto-Bold.ttf);
 }
 *{
     font-size: 14px;
@@ -160,7 +160,7 @@ body{
 }
 
 /* responsive : mobile */
-@media only screen and (min-width: 280px) and (max-width:400px){
+@media only screen and (min-width: 280px) and (max-width:820px){
     body{
         background-color: white;
         height: 700px;
@@ -210,13 +210,12 @@ body{
         flex-direction: column;
         justify-content: space-between;
     }
-    .btnclick,.iemail{
-        display: inline-block;
-        width: 80%;
-
+    .btnclick,#iemail{
+        display: block;
+        width:340px
     }
-    .iemail{
-        width: 78%;
+    #iemail{
+        width:330px;
     }
     .finalmsg{
         display: flex;     
